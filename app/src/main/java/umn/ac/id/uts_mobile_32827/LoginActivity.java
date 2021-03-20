@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     private final String username = "uasmobile";
     private final String password = "uasmobilegenap";
+    static boolean showModal = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),
                             "Successfully logged in! Please wait to be redirected!",
                             Toast.LENGTH_LONG).show();
+                    showModal = true;
 
                     // Wait 2 seconds before loading new activity.
                     new Handler().postDelayed(() -> startActivity(new Intent(getApplicationContext(), HomeActivity.class)),

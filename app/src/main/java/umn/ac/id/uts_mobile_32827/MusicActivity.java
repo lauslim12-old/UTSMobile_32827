@@ -39,7 +39,7 @@ public class MusicActivity extends AppCompatActivity {
         songName.setText(currentSong.getName());
         albumName.setText(currentSong.getAlbum());
 
-        playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+        playPauseButton.setImageResource(R.drawable.pause);
         uri = Uri.parse(currentSong.getPath());
 
         if (mediaPlayer != null) {
@@ -139,7 +139,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
 
-            playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+            playPauseButton.setImageResource(R.drawable.pause);
             mediaPlayer.start();
         } else {
             mediaPlayer.stop();
@@ -166,7 +166,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
 
-            playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+            playPauseButton.setImageResource(R.drawable.pause);
         }
     }
 
@@ -213,7 +213,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
 
-            playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+            playPauseButton.setImageResource(R.drawable.pause);
             mediaPlayer.start();
         } else {
             mediaPlayer.stop();
@@ -240,7 +240,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
 
-            playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+            playPauseButton.setImageResource(R.drawable.pause);
         }
     }
 
@@ -280,7 +280,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
         } else {
-            playPauseButton.setImageResource(R.drawable.ic_baseline_menu_24);
+            playPauseButton.setImageResource(R.drawable.pause);
             mediaPlayer.start();
             seekBar.setMax(mediaPlayer.getDuration() / 1000);
 

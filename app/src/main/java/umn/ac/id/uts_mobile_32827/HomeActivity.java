@@ -15,6 +15,8 @@ import android.view.MenuItem;
 
 import java.util.ArrayList;
 
+import static umn.ac.id.uts_mobile_32827.LoginActivity.showModal;
+
 public class HomeActivity extends AppCompatActivity {
     static ArrayList<Audio> songs;
 
@@ -24,7 +26,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         // Summons an alert.
-        welcomeDialog();
+        if (showModal) {
+            welcomeDialog();
+            showModal = false;
+        }
 
         RecyclerView musicList = findViewById(R.id.musicList);
 

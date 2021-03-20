@@ -4,6 +4,109 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileActivity">
+    tools:context=".ProfileActivity"
+    android:background="@drawable/intro_background">
+
+    <ImageView
+        android:id="@+id/my_photo"
+        android:src="@drawable/my_photo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/biodata"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/my_photo"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nim"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_class"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/biodata_icons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/biodata"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:showDividers="middle"
+        android:divider="@drawable/divider">
+
+        <ImageView
+            android:id="@+id/nicholas_github"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/github" />
+
+        <ImageView
+            android:id="@+id/nicholas_linkedin"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/linkedin" />
+
+        <ImageView
+            android:id="@+id/nicholas_stackoverflow"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/stackoverflow" />
+
+        <ImageView
+            android:id="@+id/nicholas_website"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/website" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/biodata_icons"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="References" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- Android Documentation" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="- https://youtu.be/r7B9S3S1xPI" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
