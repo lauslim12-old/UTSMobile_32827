@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import static umn.ac.id.uts_mobile_32827.HomeActivity.songs;
+import static umn.ac.id.uts_mobile_32827.Data.songs;
 
 public class MusicActivity extends AppCompatActivity {
     private TextView songName, albumName, durationStart, durationEnd;

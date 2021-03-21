@@ -10,10 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import static umn.ac.id.uts_mobile_32827.Data.showModal;
+
 public class LoginActivity extends AppCompatActivity {
     private final String username = "uasmobile";
     private final String password = "uasmobilegenap";
-    static boolean showModal = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         Button loginButton = findViewById(R.id.loginButton);
         EditText usernameInput = findViewById(R.id.inputUsername);
         EditText passwordInput = findViewById(R.id.inputPassword);
+        showModal = false;
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

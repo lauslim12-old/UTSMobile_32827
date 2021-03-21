@@ -21,7 +21,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
-import static umn.ac.id.uts_mobile_32827.HomeActivity.songs;
+import static umn.ac.id.uts_mobile_32827.Data.songs;
 
 public class MainActivity extends AppCompatActivity {
     private static final int PERMISSION_REQUEST_WRITE_EXTERNAL_FILE = 1;

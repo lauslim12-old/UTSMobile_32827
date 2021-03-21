@@ -13,12 +13,10 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
-
-import static umn.ac.id.uts_mobile_32827.LoginActivity.showModal;
+import static umn.ac.id.uts_mobile_32827.Data.songs;
+import static umn.ac.id.uts_mobile_32827.Data.showModal;
 
 public class HomeActivity extends AppCompatActivity {
-    static ArrayList<Audio> songs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
