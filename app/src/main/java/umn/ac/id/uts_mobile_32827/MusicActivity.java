@@ -245,7 +245,7 @@ public class MusicActivity extends AppCompatActivity {
 
     private void playPauseButtonClicked() {
         if (mediaPlayer.isPlaying()) {
-            playPauseButton.setImageResource(R.drawable.arrow_play);
+            playPauseButton.setImageResource(R.drawable.ic_play_button);
             mediaPlayer.pause();
             seekBar.setMax(mediaPlayer.getDuration() / 1000);
 
