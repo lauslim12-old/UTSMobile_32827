@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.MediaMetadataRetriever;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -162,9 +165,9 @@ public class MusicActivity extends AppCompatActivity {
             mediaPlayer.release();
 
             if (isNext) {
-                position = (position - 1) < 0 ? songs.size() - 1 : position - 1;
-            } else {
                 position = (position + 1) % songs.size();
+            } else {
+                position = (position - 1) < 0 ? songs.size() - 1 : position - 1;
             }
 
             uri = Uri.parse(songs.get(position).getPath());
@@ -187,7 +190,7 @@ public class MusicActivity extends AppCompatActivity {
                 }
             });
 
-            playPauseButton.setImageResource(R.drawable.pause);
+            playPauseButton.setImageResource(R.drawable.ic_play_button);
         }
     }
 
